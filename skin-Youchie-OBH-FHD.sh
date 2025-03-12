@@ -7,6 +7,7 @@ sleep 2
 
 # Check if the directory exists before removing it
 if [ -d /usr/share/enigma2/Youchie-FHD ]; then
+    rm -rf /usr/share/enigma2/Youchie-FHD 
     rm -rf /usr/lib/enigma2/python/Plugins/Extensions/YouchieSettings > /dev/null 2>&1
     
     echo 'Package removed.'
@@ -31,6 +32,7 @@ sleep 1
 rm -f /tmp/skin-Youchie-OBH-FHD.tar.gz
 
 exit 
+
 
 
 
