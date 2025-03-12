@@ -1,5 +1,7 @@
 #!/bin/bash
-
+########
+## Command=wget https://raw.githubusercontent.com/emilnabil/skins-obh/refs/heads/main/skin-Youchie-OBH-FHD.sh -O - | /bin/sh
+##
 echo "Removing previous version of Youchie-FHD..."
 sleep 2
 
@@ -29,6 +31,7 @@ sleep 1
 rm -f /tmp/skin-Youchie-OBH-FHD.tar.gz
 
 exit 
+
 
 
 
