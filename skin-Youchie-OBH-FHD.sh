@@ -2,40 +2,29 @@
 ########
 ## Command=wget https://raw.githubusercontent.com/emilnabil/skins-obh/refs/heads/main/skin-Youchie-OBH-FHD.sh -O - | /bin/sh
 ##
-echo "Removing previous version of Youchie-FHD..."
-sleep 2
 
-# Check if the directory exists before removing it
+echo "Removing previous version of Youchie-FHD..."
+
 if [ -d /usr/share/enigma2/Youchie-FHD ]; then
-    rm -rf /usr/share/enigma2/Youchie-FHD 
+    rm -rf /usr/share/enigma2/Youchie-FHD > /dev/null 2>&1
     rm -rf /usr/lib/enigma2/python/Plugins/Extensions/YouchieSettings > /dev/null 2>&1
-    
-    echo 'Package removed.'
+    echo "Package removed."
 else
     echo "You do not have previous version"
 fi
 
 echo ""
-opkg install enigma2-plugin-extensions-bitrate enigma2-plugin-extensions-oaweather
-opkg install curl
-sleep 2
+opkg install enigma2-plugin-extensions-bitrate enigma2-plugin-extensions-oaweather > /dev/null 2>&1
+opkg install curl > /dev/null 2>&1
 
-# Download and extract the package
 cd /tmp || exit
-curl -k -Lbk -m 55532 -m 555104 "https://github.com/emilnabil/skins-obh/raw/refs/heads/main/skin-Youchie-OBH-FHD.tar.gz" -o /tmp/skin-Youchie-OBH-FHD.tar.gz
-sleep 1
+curl -s -k -L "https://dreambox4u.com/emilnabil237/skins/obh/skin-Youchie-OBH-FHD.tar.gz" -o /tmp/skin-Youchie-OBH-FHD.tar.gz
 echo "Installing ...."
-tar -xzf /tmp/skin-Youchie-OBH-FHD.tar.gz -C /
+tar -xzf /tmp/skin-Youchie-OBH-FHD.tar.gz -C / > /dev/null 2>&1
 echo ""
 echo ""
-sleep 1
-rm -f /tmp/skin-Youchie-OBH-FHD.tar.gz
+rm -f /tmp/skin-Youchie-OBH-FHD.tar.gz > /dev/null 2>&1
 
-exit 
-
-
-
-
-
+exit
 
 
