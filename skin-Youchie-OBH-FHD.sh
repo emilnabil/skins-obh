@@ -5,8 +5,8 @@
 
 echo "Removing previous version of Youchie-FHD..."
 
-if [ -d /usr/share/enigma2/Youchie-FHD ]; then
-    rm -rf /usr/share/enigma2/Youchie-FHD > /dev/null 2>&1
+if [ -d /usr/share/enigma2/Youchie-PLI-FHD ]; then
+    rm -rf /usr/share/enigma2/Youchie-PLI-FHD > /dev/null 2>&1
     rm -rf /usr/lib/enigma2/python/Plugins/Extensions/YouchieSettings > /dev/null 2>&1
     echo "Package removed."
 else
@@ -26,5 +26,7 @@ echo ""
 rm -f /tmp/skin-Youchie-OBH-FHD.tar.gz > /dev/null 2>&1
 
 exit
+
+
 
 
